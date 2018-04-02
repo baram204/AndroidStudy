@@ -1,7 +1,7 @@
 ---
-title: 준비날
-weight: 0
-pre: "<b>1. </b>"
+title: 일차
+weight: 1
+pre: "<b>0 </b>"
 chapter: true
 ---
 

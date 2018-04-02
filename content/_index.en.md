@@ -1,41 +1,47 @@
 ---
-title: "Learn Theme for Hugo"
+title: "안드로이드 7일 공부"
 ---
 
-# Hugo learn theme
+# 안드로이드 7일 공부
 
-[Hugo-theme-learn](http://github.com/matcornic/hugo-theme-learn) is a theme for [Hugo](https://gohugo.io/), a fast and modern static website engine written in Go. Where Hugo is often used for blogs, this multilingual-ready theme is **fully designed for documentation**.
+ 안드로이드를 모르는 스타트업 사장님을 위한 속성 강좌용 웹사이트. 아이엠포트 연동 정도만
+ 목표로 하고 있습니다.
 
-This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) of [Grav](https://getgrav.org/), a modern flat-file CMS written in PHP.
+ {{% notice info %}}
+ 현재 작성자가 안드로이드를 공부 중입니다.
+ {{% /notice %}}
 
-{{% notice tip %}}Learn theme works with a _page tree structure_ to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "cont/pages/_index.md"%}}) 
-{{% /notice %}}
+ {{<mermaid>}}
+gantt
+        dateFormat  YYYY-MM-DD
+        title 진도표
+        section 개발자 공부 현황
+        안드 개요              :done,        des1, 2018-03-31,1d
+        헬로월드               :done,        des2, 2018-04-01, 1d
+        뷰와레이아웃            :done,       des3, 2018-04-02, 1d
+        고급위젯               :done,       des4, after des3, 1d
+        인텐트                 :crit, done, des5, after des4, 1d
+        웹뷰                   :crit, active, des6, after des5, 1d
+        네트워크                : des7, after des6, 1d
 
-## Main features
+{{< /mermaid >}}
 
+## 주요 주제
+
+* 안드 액티비티 - 뷰 기본
+* 인텐트 - 자료를 담아서 호출되는 뷰에 보내기
+* 웹브라우저 - 내부 웹브라우저에서 호출
+* 아이엠포트 결제(브라우저 사용)
 * [Automatic Search]({{%relref "basics/configuration/_index.md#activate-search" %}})
-* [Multilingual mode]({{%relref "cont/i18n/_index.md" %}})
-* **Unlimited menu levels**
-* **Automatic next/prev buttons to navigate through menu entries**
-* [Image resizing, shadow...]({{%relref "cont/markdown.en.md#images" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.en.md" %}})
-* [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.en.md" %}}) (flowchart, sequence, gantt)
-* [Customizable look and feel and themes variants]({{%relref "basics/style-customization/_index.md"%}})
-* [Buttons]({{%relref "shortcodes/button.en.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.en.md" %}}), [Expand]({{%relref "shortcodes/expand.en.md" %}})
-
-![Screenshot](https://github.com/matcornic/hugo-theme-learn/raw/master/images/screenshot.png?width=40pc&classes=shadow)
-
-## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
 
 {{% notice info %}}
-Your modification will be deployed automatically when merged.
+info
 {{% /notice %}}
 
-## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t hugo-theme-learn` -- source code is [available here at GitHub](https://github.com/matcornic/hugo-theme-learn)
+{{% notice tip %}}
+팁
+{{% /notice %}}
 
 {{% notice note %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/). Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
+note
 {{% /notice %}}

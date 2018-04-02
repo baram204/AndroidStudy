@@ -1,7 +1,7 @@
 ---
-title: 
+title: 일차
 weight: 5
-pre: "<b>1. </b>"
+pre: "<b>4 </b>"
 chapter: true
 ---
 

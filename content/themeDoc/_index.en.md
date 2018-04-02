@@ -1,7 +1,7 @@
 ---
-title: 1일차
+title: 테마문서
 weight: 20
-pre: "<b>. </b>"
+pre: "<b>-- </b>"
 chapter: true
 ---
 

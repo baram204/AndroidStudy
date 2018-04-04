@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/AndroidStudy/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/AndroidStudy/images/favicon.png" type="image/x-icon" />
-    <title>일차 :: Documentation for Hugo Learn Theme</title>
+    <title>이니시스 샘플 :: Documentation for Hugo Learn Theme</title>
     
     
     <link href="/AndroidStudy/css/nucleus.css?1522862496" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/AndroidStudy/day-5/">
+  <body class="" data-url="/AndroidStudy/day-6/03_src/03_inicis_sample/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -231,8 +231,8 @@
   
     
     <li data-nav-id="/AndroidStudy/day-5/" title="일차" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/AndroidStudy/day-5/">
@@ -255,7 +255,7 @@
   
     
     <li data-nav-id="/AndroidStudy/day-6/" title="일차" class="dd-item 
-        
+        parent
         
         
         ">
@@ -336,7 +336,7 @@
   
     
     <li data-nav-id="/AndroidStudy/day-6/03_src/" title="소스파일" class="dd-item 
-        
+        parent
         
         
         ">
@@ -417,8 +417,8 @@
   
     
     <li data-nav-id="/AndroidStudy/day-6/03_src/03_inicis_sample/" title="이니시스 샘플" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/AndroidStudy/day-6/03_src/03_inicis_sample/">
@@ -1348,7 +1348,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/baram204/AndroidStudy/edit/source/content/day-5/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/baram204/AndroidStudy/edit/source/content/day-6/03_src/03_inicis_sample/_index.en.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1371,7 +1371,19 @@
             
           
           
-            <a href='/AndroidStudy/'>안드로이드 7일 공부</a> > 일차
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/AndroidStudy/'>안드로이드 7일 공부</a> > <a href='/AndroidStudy/day-6/'>일차</a> > <a href='/AndroidStudy/day-6/03_src/'>소스파일</a> > 이니시스 샘플
+          
+         
+          
+         
           
          
           
@@ -1394,34 +1406,148 @@
 
 
 
-<h3 id="5-일차">5 일차</h3>
+<h3 id="소스-파일들">소스 파일들</h3>
 
-<h1 id="gradle">Gradle</h1>
+<h1 id="이니시스-샘플">이니시스 샘플</h1>
 
-<p><a href="https://medium.com/@goinhacker/%EC%9A%B4%EC%98%81-%EC%9E%90%EB%8F%99%ED%99%94-1-%EB%B9%8C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-by-gradle-7630c0993d09">https://medium.com/@goinhacker/%EC%9A%B4%EC%98%81-%EC%9E%90%EB%8F%99%ED%99%94-1-%EB%B9%8C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-by-gradle-7630c0993d09</a></p>
+<p>아이엠포트 SDK 와 웹뷰 사용해서 결제 데모 시연 페이지</p>
 
-<h1 id="웹에서-안드로이드-앱-실행">웹에서 안드로이드 앱 실행</h1>
+<p><a href="https://github.com/iamport/iamport-inicis-graddle">https://github.com/iamport/iamport-inicis-graddle</a></p>
 
-<h3 id="커스텀-url-스키마로-안드로이드-액티비티-실행하기">커스텀 URL 스키마로 안드로이드 액티비티 실행하기</h3>
+<h1 id="분석">분석</h1>
 
-<p>AAA.class 라는 액티비티 실행하려면</p>
+<h3 id="iniciswebviewclient">InicisWebViewClient</h3>
 
-<pre><code class="language-java">Intent intent = new Intent(this,AAA.class);
+<pre><code class="language-java">public class MainActivity extends Activity {
+
+ // 웹뷰 변수 생성
+ // 앱 스킴을 &quot;importtest://&quot;로 설정
+    private WebView mainWebView;
+    private static final String APP_SCHEME = &quot;iamporttest://&quot;;
+</code></pre>
+
+<p>액티비티 서브 클래싱</p>
+
+<pre><code class="language-java">    @SuppressLint(&quot;NewApi&quot;) @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // 메인 뷰 호출
+        setContentView(R.layout.activity_main);
+</code></pre>
+
+<p>@SuppressLint(&ldquo;NewApi&rdquo;)</p>
+
+<p>옛 버전(minSdkVersion) 이후의 새 버전의 API 메소드를 호출할 경우.</p>
+
+<p>오작동이나 크래시가 날 수도 있으니. 경고를 보내는데 이 린트 경고를 무시한다.</p>
+
+<pre><code class="language-java">       // xml 레이아웃에서 웹뷰 컴포넌트 가져오기.
+        mainWebView = (WebView) findViewById(R.id.mainWebView);
+        // 웹 클라이언트 지정
+        mainWebView.setWebViewClient(new InicisWebViewClient(this));
+</code></pre>
+
+<blockquote>
+<p><strong>WebView</strong> 기본적으로 보여주기만 한다.</p>
+</blockquote>
+
+<pre><code>Uri uri = Uri.parse(&quot;https://www.example.com&quot;);
+Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 startActivity(intent);
 </code></pre>
 
-<p>그럼 특정 Uri 를 통해서 인텐트를 실행하려면</p>
+<p><a href="https://developer.android.com/reference/android/webkit/WebView.html">https://developer.android.com/reference/android/webkit/WebView.html</a></p>
 
-<pre><code class="language-java">String url =&quot;http://gun0912.tistory.com&quot;;
-Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-startActivity(intent);
+<pre><code class="language-java">        // 웹뷰를 컨트롤 하기위해 사되는 웹셋팅 객체 가져온다.
+        WebSettings settings = mainWebView.getSettings();
+        // 이 설정객체에 웹뷰에서 자바스크립트 허용설정.
+        settings.setJavaScriptEnabled(true);
+
 </code></pre>
 
-<p><a href="https://medium.com/@gun0912/android-start-activity-by-custom-url-scheme-eada62fdf9eb">https://medium.com/@gun0912/android-start-activity-by-custom-url-scheme-eada62fdf9eb</a></p>
+<p><a href="https://developer.android.com/reference/android/webkit/WebViewClient.html">https://developer.android.com/reference/android/webkit/WebViewClient.html</a></p>
 
-<h1 id="웹뷰">웹뷰</h1>
+<pre><code class="language-java">        // 빌드 SDK 버전이 롤리팝 이상이면
+        if (android.os.Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) {
+          // http https 섞인 컨텐츠 모드 항상 허용 설정.
+          settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+          // 또한 쿠키 긴으도 허용.
+            CookieManager cookieManager = CookieManager.getInstance();
+            cookieManager.setAcceptCookie(true);
+            cookieManager.setAcceptThirdPartyCookies(mainWebView, true);
+        }
 
-<p><a href="http://g-y-e-o-m.tistory.com/28">http://g-y-e-o-m.tistory.com/28</a></p>
+</code></pre>
+
+<blockquote>
+<p><strong>setMixedContentMode</strong> Configures the WebVie` behavior when a secure origin attempts to load a resource from an insecure origin. By default, apps that target KITKAT or below default to MIXED_CONTENT_ALWAYS_ALLOW. Apps targeting LOLLIPOP default to MIXED_CONTENT_NEVER_ALLOW. The preferred and most secure mode of operation for the WebView is MIXED_CONTENT_NEVER_ALLOW and use of MIXED_CONTENT_ALWAYS_ALLOW is strongly discouraged.</p>
+</blockquote>
+
+<p>PG 사 결제화면 및 카드사 인증화면간 여러 번 http, https 리다이렉션 되는 과정에서 웹뷰 설정을
+해줘야 한다고 함.</p>
+
+<p><a href="https://developer.android.com/reference/android/webkit/WebSettings.html">https://developer.android.com/reference/android/webkit/WebSettings.html</a></p>
+
+<blockquote>
+<p><strong>setAcceptThirdPartyCookies</strong> Sets whether the WebView should allow third party cookies to be set. Allowing third party cookies is a per WebView policy and can be set differently on different WebView instances.</p>
+</blockquote>
+
+<p>Apps that target KITKAT or below default to allowing third party cookies. Apps targeting LOLLIPOP or later default to disallowing third party cookies.</p>
+
+<p>그리고 카드사 인증 단계에서 쿠기기능 활용하는게 필요하다고.. 요것도 롤리팝 이상부터 허용 설정이 필요함.</p>
+
+<p><a href="https://developer.android.com/reference/android/webkit/CookieManager.html">https://developer.android.com/reference/android/webkit/CookieManager.html</a></p>
+
+<pre><code class="language-java">        // getIntent 는 Acrivity 메서드.
+        // 인텐트를 가져온다.(있으면)
+        Intent intent = getIntent();
+        // 인텐트 자료를 가져와서 Uri 객체에 담는다.
+        Uri intentData = intent.getData();
+
+        // 인텐트 데이터가 없을 경우...
+        // 처음 실행이 되었고 다른 앱에서 인텐트를 넘기지 않았을 경우에
+        if ( intentData == null ) {
+          // 웹뷰가 아이엠포트를 로드하게 한다.
+            mainWebView.loadUrl(&quot;http://www.iamport.kr/demo&quot;);
+//          mainWebView.loadUrl(&quot;http://192.168.0.77:8888&quot;);
+        } else {
+          // 그게 아니라면.. 그니까 다른 곳에서 다시 메인 액티비티를 호출했을 때.
+            //isp 인증 후 복귀했을 때 결제 후속조치
+            String url = intentData.toString();
+          // importtest:// 스킴으로 시작하는지 검사해서
+            if ( url.startsWith(APP_SCHEME) ) {
+            // 거기로 리다이렉트 시켜버린다.
+                String redirectURL = url.substring(APP_SCHEME.length()+3);
+                mainWebView.loadUrl(redirectURL);
+            }
+        }
+    }
+
+</code></pre>
+
+<pre><code class="language-java">
+    @Override
+    protected void onNewIntent(Intent intent) {
+      // 액티비티의 인스턴스가 시작될 때, 인텐트 url 받아와서
+        String url = intent.getDataString();
+      // importtest:// 스킴으로 시작되는지 검사해서
+        if ( url.startsWith(APP_SCHEME) ) {
+        // 리다이렉트 시켜버린다.
+            String redirectURL = url.substring(APP_SCHEME.length()+3);
+            mainWebView.loadUrl(redirectURL);
+        }
+    }
+
+}
+</code></pre>
+
+<blockquote>
+<p><strong>onNewIntent</strong> This is called for activities that set launchMode to &ldquo;singleTop&rdquo; in their package, or if a client used the FLAG_ACTIVITY_SINGLE_TOP flag when calling startActivity(Intent). In either case, when the activity is re-launched while at the top of the activity stack instead of a new instance of the activity being started, onNewIntent() will be called on the existing instance with the Intent that was used to re-launch it.</p>
+</blockquote>
+
+<p>An activity will always be paused before receiving a new intent, so you can count on onResume() being called after this method.</p>
+
+<p><a href="https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent">https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent</a>)</p>
 
 
 <footer class=" footline" >
@@ -1544,7 +1670,6 @@ startActivity(intent);
             
                 
                     
-                    
                 
                 
 
@@ -1561,8 +1686,6 @@ startActivity(intent);
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1579,52 +1702,8 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1658,43 +1737,6 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1711,20 +1753,8 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1758,6 +1788,32 @@ startActivity(intent);
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1779,25 +1835,6 @@ startActivity(intent);
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1813,11 +1850,10 @@ startActivity(intent);
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1943,6 +1979,104 @@ startActivity(intent);
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -2185,10 +2319,10 @@ startActivity(intent);
 
 
         
-            <a class="nav nav-prev" href="/AndroidStudy/day-4/" title="일차"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/AndroidStudy/day-6/03_src/02_iamportsdk/" title="아이엠포트SDK"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/AndroidStudy/day-6/" title="일차" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/AndroidStudy/day-7/" title="일차" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

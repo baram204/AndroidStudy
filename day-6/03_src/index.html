@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/AndroidStudy/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/AndroidStudy/images/favicon.png" type="image/x-icon" />
-    <title>일차 :: Documentation for Hugo Learn Theme</title>
+    <title>소스파일 :: Documentation for Hugo Learn Theme</title>
     
     
     <link href="/AndroidStudy/css/nucleus.css?1522862496" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/AndroidStudy/day-5/">
+  <body class="" data-url="/AndroidStudy/day-6/03_src/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -231,8 +231,8 @@
   
     
     <li data-nav-id="/AndroidStudy/day-5/" title="일차" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/AndroidStudy/day-5/">
@@ -255,7 +255,7 @@
   
     
     <li data-nav-id="/AndroidStudy/day-6/" title="일차" class="dd-item 
-        
+        parent
         
         
         ">
@@ -336,8 +336,8 @@
   
     
     <li data-nav-id="/AndroidStudy/day-6/03_src/" title="소스파일" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/AndroidStudy/day-6/03_src/">
@@ -1348,7 +1348,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/baram204/AndroidStudy/edit/source/content/day-5/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/baram204/AndroidStudy/edit/source/content/day-6/03_src/_index.en.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1371,7 +1371,13 @@
             
           
           
-            <a href='/AndroidStudy/'>안드로이드 7일 공부</a> > 일차
+            
+            
+          
+          
+            <a href='/AndroidStudy/'>안드로이드 7일 공부</a> > <a href='/AndroidStudy/day-6/'>일차</a> > 소스파일
+          
+         
           
          
           
@@ -1394,34 +1400,53 @@
 
 
 
-<h3 id="5-일차">5 일차</h3>
+<h3 id="소스파일들">소스파일들</h3>
 
-<h1 id="gradle">Gradle</h1>
+<h1 id="구조">구조</h1>
 
-<p><a href="https://medium.com/@goinhacker/%EC%9A%B4%EC%98%81-%EC%9E%90%EB%8F%99%ED%99%94-1-%EB%B9%8C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-by-gradle-7630c0993d09">https://medium.com/@goinhacker/%EC%9A%B4%EC%98%81-%EC%9E%90%EB%8F%99%ED%99%94-1-%EB%B9%8C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-by-gradle-7630c0993d09</a></p>
+<pre><code>src
+└─main
+    │  AndroidManifest.xml
+    │
+    ├─java
+    │  └─com
+    │      └─siot
+    │          ├─iamportsdk
+    │          │      InicisWebViewClient.java
+    │          │      PaymentScheme.java
+    │          │
+    │          └─inicissample
+    │                  MainActivity.java
+    │                  SubActivity.java
+    │
+    └─res
+        ├─drawable-hdpi
+        │      ic_launcher.png
+        │
+        ├─drawable-mdpi
+        │      ic_launcher.png
+        │
+        ├─drawable-xhdpi
+        │      ic_launcher.png
+        │
+        ├─drawable-xxhdpi
+        │      ic_launcher.png
+        │
+        ├─layout
+        │      activity_main.xml
+        │
+        ├─values
+        │      strings.xml
+        │      styles.xml
+        │
+        ├─values-v11
+        │      styles.xml
+        │
+        └─values-v14
+                styles.xml
 
-<h1 id="웹에서-안드로이드-앱-실행">웹에서 안드로이드 앱 실행</h1>
 
-<h3 id="커스텀-url-스키마로-안드로이드-액티비티-실행하기">커스텀 URL 스키마로 안드로이드 액티비티 실행하기</h3>
-
-<p>AAA.class 라는 액티비티 실행하려면</p>
-
-<pre><code class="language-java">Intent intent = new Intent(this,AAA.class);
-startActivity(intent);
 </code></pre>
-
-<p>그럼 특정 Uri 를 통해서 인텐트를 실행하려면</p>
-
-<pre><code class="language-java">String url =&quot;http://gun0912.tistory.com&quot;;
-Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-startActivity(intent);
-</code></pre>
-
-<p><a href="https://medium.com/@gun0912/android-start-activity-by-custom-url-scheme-eada62fdf9eb">https://medium.com/@gun0912/android-start-activity-by-custom-url-scheme-eada62fdf9eb</a></p>
-
-<h1 id="웹뷰">웹뷰</h1>
-
-<p><a href="http://g-y-e-o-m.tistory.com/28">http://g-y-e-o-m.tistory.com/28</a></p>
 
 
 <footer class=" footline" >
@@ -1544,7 +1569,6 @@ startActivity(intent);
             
                 
                     
-                    
                 
                 
 
@@ -1561,8 +1585,6 @@ startActivity(intent);
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1579,52 +1601,8 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1658,43 +1636,6 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1711,36 +1652,8 @@ startActivity(intent);
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1788,20 +1701,8 @@ startActivity(intent);
             
         
                     
-                        
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
+        
                     
                         
             
@@ -1818,6 +1719,36 @@ startActivity(intent);
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -1943,6 +1874,104 @@ startActivity(intent);
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -2185,10 +2214,10 @@ startActivity(intent);
 
 
         
-            <a class="nav nav-prev" href="/AndroidStudy/day-4/" title="일차"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/AndroidStudy/day-6/02_gradle/" title="Gradle 설정"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/AndroidStudy/day-6/" title="일차" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/AndroidStudy/day-6/03_src/01_manifest/" title="AndroidManifests.xml" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

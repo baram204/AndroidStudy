@@ -3,186 +3,210 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/themedoc/cont/pages/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/day-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/day-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/day-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/pages/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/day-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/03_src/01_manifest/</loc>
   </url>
   
   <url>
-    <loc>/day-2/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/basics/</loc>
   </url>
   
   <url>
-    <loc>/day-3/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/01_structure/</loc>
   </url>
   
   <url>
-    <loc>/day-4/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-4/</loc>
   </url>
   
   <url>
-    <loc>/day-5/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-5/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/basics/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/</loc>
   </url>
   
   <url>
-    <loc>/day-6/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-7/</loc>
   </url>
   
   <url>
-    <loc>/day-7/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/archetypes/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/cont/archetypes/</loc>
-  </url>
-  
-  <url>
-    <loc>/themedoc/cont/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/basics/requirements/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/02_gradle/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/cont/markdown/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/basics/requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/03_src/02_iamportsdk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/markdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/basics/installation/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/basics/installation/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/basics/configuration/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/03_src/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/day-6/03_src/03_inicis_sample/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/basics/configuration/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/cont/menushortcuts/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/menushortcuts/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/basics/style-customization/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/basics/style-customization/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/cont/i18n/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/cont/i18n/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/test/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/test/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/attachments/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/attachments/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/button/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/button/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/</loc>
   </url>
   
   <url>
-    <loc>/credits/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/expand/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/expand/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/mermaid/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/notice/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/mermaid/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/siteparam/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/notice/</loc>
-  </url>
-  
-  <url>
-    <loc>/themedoc/shortcodes/siteparam/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-1/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-1/children-1-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-1/children-1-1/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-2/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-2/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-3/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-3/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-4/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-4/</loc>
   </url>
   
   <url>
-    <loc>/themedoc/shortcodes/children/children-2/test3/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/themedoc/shortcodes/children/children-2/test3/</loc>
   </url>
   
   <url>
-    <loc>/showcase/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/credits/</loc>
   </url>
   
   <url>
-    <loc>/day-0/</loc>
+    <loc>https://baram204.github.io/AndroidStudy/showcase/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baram204.github.io/AndroidStudy/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
 </urlset>

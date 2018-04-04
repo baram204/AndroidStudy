@@ -7,6 +7,6 @@ chapter: true
 
 ### 여섯째날
 
-# Basics
+# 아이엠포트 소스 분석
 
-Discover what this Hugo theme is all about and the core-concepts behind it.
+아이엠포트 소스를 분석해봅니다.
